@@ -1,0 +1,63 @@
+html {
+  min-height: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body>div {
+  min-height: 100%;
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Noto Serif', serif;
+  overflow: scroll;
+}
+
+.images {
+  grid-area: picture;
+}
+
+.words {
+  grid-area: word;
+}
+
+h1 {
+  font-size: 36px;
+  text-align: left;
+}
+
+#rose {
+  width: 100%;
+}
+
+#keyboard {
+  width: 3%;
+  margin-right: 2%;
+}
+
+#mouse {
+  width: 3%;
+  margin-right: 2%;
+}
+
+.instruction {
+  margin-top: 10%;
+}
+
+.explore {
+  display: flex;
+}
+
+.explore p {
+  padding-right: 5%
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 45% 55%;
+  grid-template-areas: 'picture word';
+  margin-top: 5%;
+  /* margin-left: 5%; */
+  /* margin-right: 5%; */
+}

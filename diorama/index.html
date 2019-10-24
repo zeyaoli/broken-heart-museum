@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>BreakUp Diorama</title>
+
+  <!-- P5 libraries -->
+  <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+
+
+  <script language="javascript" type="text/javascript" src="libraries/p5.sound.js"></script>
+
+  <!-- A-Frame libraries -->
+  <script language="javascript" type="text/javascript" src="libraries/aframe.min.js"></script>
+
+  <!-- AFrameP5 library -->
+  <script language="javascript" type="text/javascript" src="libraries/aframep5.js"></script>
+
+  <!-- Don't need this right now -->
+  <!-- <script language="javascript" type="text/javascript" src="libraries/threex.bubble.js"></script> -->
+
+  <!-- P5 Sketch -->
+  <script language="javascript" type="text/javascript" src="sketch.js"></script>
+
+
+
+  <!-- custom styles -->
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- container to hold our VR scene - make sure to give this element an ID of 'VRScene' -->
+  <a-scene id="VRScene">
+
+    <a-entity position="0 1.6 0" camera look-controls></a-entity>
+    <a-entity camera="active: true" look-controls wasd-controls position="0 0 0" data-aframe-default-camera></a-entity>
+
+    <!--
+		       The 'a-assets' container is used to load in any external artwork you may want to use as "textures" for your objects.
+		       Ensure that this element has an ID of 'VRAssets'
+
+		       Textures can be loaded by creating a new 'a-asset' tag inside of the 'a-assets' container.
+		       When doing this you will need to make sure to give your textures a unique ID -
+		       this will be used by p5 to create new objects.
+
+		       Example:
+
+		       <img id="ITEM_ID_GOES_HERE" src="images/gold_block.png"></asset-item>
+			-->
+    <!-- all the image assets and textures go to here -->
+    <a-assets id="VRAssets">
+      <!-- <img src="images/floor.jpeg" id="floor"> -->
+      <img src="images/floor_fur_2.jpg" id="floor">
+      <img src="images/wallpaper_pink.jpg" id="wall">
+      <img src="images/ceiling.jpeg" id="ceiling_tex">
+    </a-assets>
+
+    <!-- <a-assets id="desk_obj" src="models/ModernDeskOBJ.obj"></a-assets> -->
+    <!-- <a-assets src="textures/ModernDeskOBJ.mtl" id="deskTexture"></a-assets> -->
+
+    <a-assets src="models/computer.obj" id="computer_obj"></a-assets>
+    <a-assets src="textures/computer.mtl" id="computer_tex"></a-assets>
+    <!-- bed -->
+    <a-assets src="models/bed.obj" id="bed_obj"></a-assets>
+    <a-assets src="textures/bed.mtl" id="bed_tex"></a-assets>
+    <!-- lip decoration -->
+    <a-assets src="models/lip.obj" id="lip_obj"></a-assets>
+    <a-assets src="textures/lip.mtl" id="lip_tex"></a-assets>
+    <!-- lamp -->
+    <a-assets src="models/lamp.obj" id="lamp_obj"></a-assets>
+    <a-assets src="textures/lamp.mtl" id="lamp_tex"></a-assets>
+    <!-- working desk -->
+    <a-assets src="models/workingDesk.obj" id="workingDesk_obj"></a-assets>
+    <a-assets src="textures/workingDesk.mtl" id="workingDesk_tex"></a-assets>
+    <!-- desk -->
+    <a-assets src="models/book.obj" id="book_obj"></a-assets>
+    <a-assets src="textures/book.mtl" id="book_tex"></a-assets>
+
+    <a-assets src="models/round_table.obj" id="table_obj"></a-assets>
+    <a-assets src="textures/round_table.mtl" id="table_tex"></a-assets>
+
+    <a-assets src="models/breakfast.obj" id="breakfast_obj"></a-assets>
+    <a-assets src="textures/breakfast.mtl" id="breakfast_tex"></a-assets>
+
+    <a-assets src="models/recordPlayer.obj" id="recordPlayer_obj"></a-assets>
+    <a-assets src="textures/recordPlayer.mtl" id="recordPlayer_tex"></a-assets>
+
+    <a-assets src="models/blue_table.obj" id="blueTable_obj"></a-assets>
+    <a-assets src="textures/blue_table.mtl" id="blueTable_tex"></a-assets>
+
+    <a-assets src="models/rose.obj" id="rose_obj"></a-assets>
+    <a-assets src="textures/rose.mtl" id="rose_tex"></a-assets>
+
+    <a-assets src="models/drawing_desk.obj" id="drawingDesk_obj"></a-assets>
+    <a-assets src="textures/drawing_desk.mtl" id="drawingDesk_tex"></a-assets>
+
+    <!-- create the sky assets here, and likne the image source -->
+    <!-- <a-sky id="theSky" color="rgb(0,0,0)"></a-sky> -->
+
+    <a-entity light="type: ambient; color: #942b9e"></a-entity>
+    <!-- <a-entity light="type: ambient; color: #e9d1ee"></a-entity> -->
+    <!-- <a-entity light="type: directional; color: #fff4e5; intensity: 0.4" position="3 1 -4"></a-entity> -->
+    <a-entity light="type: point; intensity: 0.7; distance: 10; decay: 1.3; color: #fff4e5" position="-1.5 3.5 3.2" rotation="-90 0 0"></a-entity>
+    <!-- <a-entity light="type: spot; angle: 30; intensity: 0.7; distance: 6; decay: 1.2" position="-1 5 3.2" ; rotation="-90 0 0"></a-entity> -->
+
+
+
+  </a-scene>
+
+</body>
+
+</html>
